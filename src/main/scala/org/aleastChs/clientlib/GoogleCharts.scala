@@ -55,12 +55,23 @@ class MVCObject extends js.Object {
     class DataTable(
                      optional_data: String = "",
                      optional_version: String = "") extends js.Object {
-      def addColumn(`type`: String, opt_label: String = "", opt_id: String = ""): Unit = js.native
-      def addColumn(`type`: String): Unit = js.native
-      def addColumn(description_object: Array[String]): Unit = js.native
-      def addRows(rows: js.Array[js.Array[js.Any]]): Unit = js.native
-      def addRow(row: js.Array[js.Any]): Unit = js.native
-      def addRow(): Unit = js.native
+      def addColumn(`type`: String, opt_label: String = "", opt_id: String = ""): Int = js.native
+      def addColumn(description_object: Array[String]): Int = js.native
+      def addRows(rows: js.Array[js.Array[js.Any]]): Int = js.native
+      def addRows(numOrArray: js.Any): Int = js.native
+      def addRow(row: js.Array[js.Any]): Int = js.native
+      def addRow(): Int = js.native
+      def getColumnId(columnIndex: Int): String = js.native
+
+      def getColumnLabel(columnIndex: Int):	String = js.native
+      def getColumnPattern(columnIndex: Int):	String = js.native
+      def getColumnProperties(columnIndex: Int): js.Object = js.native
+      def getColumnProperty(columnIndex: Int, name: String): js.Any = js.native
+      def getColumnRange(columnIndex: Int): js.Object = js.native
+      def getColumnRole(columnIndex: Int): String = js.native
+      def getColumnType(columnIndex: Int): String = js.native
+      def getDistinctValues(columnIndex: Int): js.Array[js.Object] = js.native
+      def getFilteredRows(filters: js.Array[js.Object]): js.Array[js.Object] = js.native
       def getNumberOfRows(): Int = js.native
       def getTableProperties(): js.Object = js.native
       def toJSON(): String = js.native
