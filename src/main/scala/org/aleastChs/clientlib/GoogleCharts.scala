@@ -36,7 +36,7 @@ package google {
 
     @JSName("google.visualization.AnnotationChart")
     @js.native
-    case class AnnotationChart(container: js.Dynamic) extends js.Object {
+    class AnnotationChart(container: js.Dynamic) extends js.Object {
 
     }
 
@@ -45,14 +45,14 @@ package google {
 
     @JSName("google.visualization.ColumnChart")
     @js.native
-    case class ColumnChart(container: js.Dynamic) extends js.Object {
+    class ColumnChart(container: js.Dynamic) extends js.Object {
 
     }
 
 
     @JSName("google.visualization.Timeline")
     @js.native
-    case class Timeline(container: js.Dynamic) extends js.Object  {
+    class Timeline(container: js.Dynamic) extends js.Object  {
     }
 
     @JSName("google.visualization.DataTable")
