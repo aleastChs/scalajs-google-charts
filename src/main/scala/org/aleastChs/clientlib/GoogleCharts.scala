@@ -25,7 +25,7 @@ package google {
 
   @JSName("google.visualization")
   @js.native
-  object visualization {
+  object visualization extends js.Object{
     // STATIC METHODS
     def arrayToDataTable(twoDArray: js.Array[js.Array[js.Any]], opt_firstRowIsData: Boolean = false): DataTable = js.native
 
