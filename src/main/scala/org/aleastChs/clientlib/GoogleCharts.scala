@@ -26,7 +26,7 @@ package google {
   @js.native
   object visualization {
     // STATIC METHODS
-    def arrayToDataTable(twoDArray: js.Array[js.Any][js.Any], opt_firstRowIsData: Boolean = false): DataTable = js.native
+    def arrayToDataTable(twoDArray: js.Array[js.Array[js.Any]], opt_firstRowIsData: Boolean = false): DataTable = js.native
 
     def drawChart(chart_JSON_or_object: js.Any): Unit = js.native
 
