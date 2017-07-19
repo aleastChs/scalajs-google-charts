@@ -4,11 +4,6 @@ Type-safe and Scala-friendly facade-library over Google Charts
 # Current version
 0.1.1
 
-# Todo
-Update README
-
-http://central.sonatype.org/pages/ossrh-guide.html#initial-setup ?
-
 # About 
 I wanted to use Timeline Chart (https://developers.google.com/chart/interactive/docs/gallery/timeline) 
 for an ungoing project (https://github.com/kristoferB/SP), 
