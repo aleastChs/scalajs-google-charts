@@ -18,6 +18,7 @@ package google {
   }
 
   @JSName("google.QueryResponse")
+  @js.native
   class QueryResponse extends js.Object {
 
   }
@@ -32,40 +33,10 @@ package google {
 
     def drawToolbar(): Unit = js.native
 
-    // EXCEPTION FOR CHARTS
-    // Thrown if Chart does not have the method from StandardChart Trait
-    case class NoSuchMethodInChartException(message: String) extends Exception(message)
-
-    trait StandardChart {
-      // todo fix result value
-      def getAction(id: String): Unit = js.native
-
-      def getSelection(): js.Array[js.Object] = js.native
-
-      def removeAction(id: String): Unit = js.native
-
-      def setAction(action_object: js.Object): Unit = js.native
-
-      def setSelection(selection_array: js.Array[js.Object]): Unit = js.native
-
-      //      def clearChart(): Unit = js.native
-      //      // TODO Fix state
-      //      def draw(data: DataTable, options: js.Object): Unit = js.native
-      //      def draw(dataTable: DataTable, options: js.Object, state: _): Unit = js.native
-      //
-      //      // Todo fix Handler
-      //      def getContainer(): Unit = js.native
-      //      def getSelection(): js.Array[js.Object] = js.native
-      //      def getVisibleChartRange(): js.Object = js.native
-      //      def hideDataColumns(columnIndexes: Int): Unit = js.native
-      //      def setVisibleChartRange(start: js.Date, end: js.Date): Unit = js.native
-      //      def showDataColumns(columnIndexes: Int): Unit = js.native
-    }
-
 
     @JSName("google.visualization.AnnotationChart")
     @js.native
-    case class AnnotationChart(container: js.Dynamic) extends js.Object with StandardChart {
+    case class AnnotationChart(container: js.Dynamic) extends js.Object {
 
     }
 
@@ -81,7 +52,7 @@ package google {
 
     @JSName("google.visualization.Timeline")
     @js.native
-    case class Timeline(container: js.Dynamic) extends js.Object with StandardChart {
+    case class Timeline(container: js.Dynamic) extends js.Object  {
     }
 
     @JSName("google.visualization.DataTable")
