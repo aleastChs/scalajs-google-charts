@@ -1,35 +1,37 @@
 import sbt.Keys._
+import sbt._
 
-lazy val root = project.in(file(".")).
-  enablePlugins(ScalaJSPlugin).settings(
-  publishMavenStyle := true
+lazy val commonSettings = Seq(
+  version in ThisBuild := Versions.scalaJSGoogleCharts,
+  organization in ThisBuild := Settings.organizationName
 )
 
-name := "Type-safe and Scala-friendly library over Google Charts"
+lazy val bintrayPublishIvyStyle = settingKey[Boolean]("=== !publishMavenStyle") //workaround for sbt-bintray bug
 
-normalizedName := "scalajs-google-charts"
-
-version := "0.1"
-
-organization := "org.aleastChs"
-
-scalaVersion := "2.12.2"
-scalacOptions ++= Seq("-deprecation", "-feature", "-Xfatal-warnings")
-
-crossScalaVersions := Seq("2.10.4", "2.11.5")
-
-crossScalaVersions in ThisBuild := Seq("2.11.5", "2.10.4", "2.12.2", "2.13.0-M1")
-scalaVersion in ThisBuild := (crossScalaVersions in ThisBuild).value.head
-
-libraryDependencies ++= Seq(
-  "org.scala-js" %%% "scalajs-dom" % "0.9.3"
+lazy val publishSettings = Seq(
+  bintrayRepository := Settings.bintrayRepo,
+  bintrayOrganization := Some(Settings.bintrayOrg),
+  licenses += (Settings.license, url(Settings.licenseURL)),
+  bintrayPublishIvyStyle := true
 )
 
-jsDependencies in Test += RuntimeDOM
+
+lazy val root = (project in file("."))
+  .enablePlugins(ScalaJSPlugin)
+  .settings(
+    commonSettings,
+    publishSettings,
+    sbtPlugin := true,
+    name := Settings.facadeName,
+    description := Settings.normalizedNamed,
+    normalizedName := Settings.normalizedNamed,
+    scalaVersion := Versions.scalaPrimary,
+    crossScalaVersions := Versions.scalaOlder
+  )
 
 homepage := Some(url("https://github.com/aleastChs"))
 
-licenses += ("MIT License", url("http://www.opensource.org/licenses/mit-license.php"))
+licenses += (Settings.license, url(Settings.licenseURL))
 
 scmInfo := Some(ScmInfo(
   url("https://github.com/aleastChs/scalajs-google-charts"),
@@ -37,27 +39,20 @@ scmInfo := Some(ScmInfo(
   Some("scm:git:git@github.com:aleastChs/scalajs-google-charts.git")))
 
 
-publishMavenStyle := true
+pomExtra :=
+  <licenses>
+    <license>
+      <name>MIT License</name>
+      <url>https://opensource.org/licenses/MIT</url>
+    </license>
+  </licenses>
+    <developers>
+      <developer>
+        <id>aleastChs</id>
+        <name>Alexander Åstrand (@chalmersUniversity)</name>
+        <url>https://github.com/aleastChs/</url>
+      </developer>
+    </developers>
 
-/*
-TODO: http://central.sonatype.org/pages/ossrh-guide.html#initial-setup
-
-publishTo := {
-  val nexus = "https://oss.sonatype.org/"
-  if (isSnapshot.value)
-    Some("snapshots" at nexus + "content/repositories/snapshots")
-  else
-    Some("releases" at nexus + "service/local/staging/deploy/maven2")
-}*/
-
-pomExtra := (
-  <developers>
-    <developer>
-      <id>aleastChs</id>
-      <name>Alexander Åstrand (@chalmersUniversity)</name>
-      <url>https://github.com/aleastChs/</url>
-    </developer>
-  </developers>
-  )
 
 pomIncludeRepository := { _ => false }
