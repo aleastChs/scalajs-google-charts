@@ -1,43 +1,42 @@
 import sbt.Keys._
 import sbt._
 
-
-
 // COMMONSETTINGS
 lazy val commonSettings = Seq(
-  version in ThisBuild := Versions.scalaJSGoogleCharts,
-  organization in ThisBuild := Settings.organizationName
+  version in ThisBuild := Versions.scalaJSGoogleCharts,   // version of current scalajs-google-charts facade
+  organization in ThisBuild := Settings.organizationName  // organization name
 )
 
-
 // PUBLISHING
-lazy val bintrayPublishIvyStyle = settingKey[Boolean]("=== !publishMavenStyle") //workaround for sbt-bintray bug
-
+//workaround for sbt-bintray bug
+lazy val bintrayPublishIvyStyle = settingKey[Boolean]("=== !publishMavenStyle")
+// PUBLISHING-SETTINGS
 lazy val publishSettings = Seq(
-  bintrayRepository := Settings.bintrayRepo,
-  bintrayOrganization := Some(Settings.bintrayOrg),
-  licenses += (Settings.license, url(Settings.licenseURL)),
-  bintrayPublishIvyStyle := true
+  bintrayRepository := Settings.bintrayRepo,              // bintray repo name    (<user>/<repo> on bintray)
+  bintrayOrganization := Some(Settings.bintrayOrg),       // bintray organization (<user> on bintray)
+  licenses += (Settings.license, url(Settings.licenseURL)),   // license for this repo
+  bintrayPublishIvyStyle := true                          // publish in Ivy-format style
 )
 
 // ROOT
 lazy val root = (project in file("."))
-  .enablePlugins(ScalaJSPlugin)
+  .enablePlugins(ScalaJSPlugin)                           // enable scalajs plugin
   .settings(
-    commonSettings,
-    publishSettings,
-    sbtPlugin := true,
-    name := Settings.facadeName,
-    description := Settings.facadeName,
-    scalaVersion := Versions.scalaPrimary,
-    crossScalaVersions := Versions.scalaOlder
+    commonSettings,                                       // enable commonsettings
+    publishSettings,                                      // enable publish settings
+    sbtPlugin := true,                                    // to make an auto plugin, create a project and configure sbtPlugin to true
+    name := Settings.facadeName,                          // name (same as <user>/<repo>/<NAME> on bintray)
+    description := Settings.facadeName,                   // description
+    scalaVersion := Versions.scalaPrimary,                // scala version for root
+    crossScalaVersions := Versions.scalaOlder             // cross scala ver. for rott
   )
 // My Github
-homepage := Some(url("https://github.com/aleastChs"))
+homepage := Some(url(Settings.homePageName))
 
 // MIT License
 licenses += (Settings.license, url(Settings.licenseURL))
 
+// info for scm
 scmInfo := Some(ScmInfo(
   url("https://github.com/aleastChs/scalajs-google-charts"),
   "scm:git:git@github.com/aleastChs/scalajs-google-charts.git",

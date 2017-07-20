@@ -1,13 +1,18 @@
 object Settings {
-  val bintrayOrg = "aleastchs"
-  val bintrayRepo = "aleastChs-releases"
+  // Bintray Structure
+  // Username:        aleastchs
+  // Repo:            aleastchs/aleastChs-releases
+  // Package Name:    aleastchs/aleastChs-releases/scalajs-google-charts
 
-  val organizationName = "org.aleastChs"
-  val homePageName = "https://github.com/aleastChs"
+  val bintrayOrg = "aleastchs"                                      // My bintray user-name
+  val bintrayRepo = "aleastChs-releases"                            // One Repo of mine on Bintray
 
-  val facadeName = "scalajs-google-charts"
-  val normalizedNamed = "Scala-friendly library over Google Charts"
+  val organizationName = "org.aleastChs"                            // Placeholder
+  val homePageName = "https://github.com/aleastChs"                 // My github website
 
-  val license = "MIT License"
-  val licenseURL = "https://opensource.org/licenses/MIT"
+  val facadeName = "scalajs-google-charts"                          // plugin name
+  val normalizedNamed = "Scala-friendly library over Google Charts" // Currently not used
+
+  val license = "MIT License"                             // Use A MIT LICENSE (see root/LICENSE)
+  val licenseURL = "https://opensource.org/licenses/MIT"  // Website with license
 }
