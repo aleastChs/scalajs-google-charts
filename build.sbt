@@ -2,6 +2,7 @@ import sbt.Keys._
 import sbt._
 
 
+
 // COMMONSETTINGS
 lazy val commonSettings = Seq(
   version in ThisBuild := Versions.scalaJSGoogleCharts,
