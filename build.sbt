@@ -1,11 +1,15 @@
 import sbt.Keys._
 import sbt._
 
+
+// COMMONSETTINGS
 lazy val commonSettings = Seq(
   version in ThisBuild := Versions.scalaJSGoogleCharts,
   organization in ThisBuild := Settings.organizationName
 )
 
+
+// PUBLISHING
 lazy val bintrayPublishIvyStyle = settingKey[Boolean]("=== !publishMavenStyle") //workaround for sbt-bintray bug
 
 lazy val publishSettings = Seq(
@@ -15,7 +19,7 @@ lazy val publishSettings = Seq(
   bintrayPublishIvyStyle := true
 )
 
-
+// ROOT
 lazy val root = (project in file("."))
   .enablePlugins(ScalaJSPlugin)
   .settings(
@@ -23,14 +27,14 @@ lazy val root = (project in file("."))
     publishSettings,
     sbtPlugin := true,
     name := Settings.facadeName,
-    description := Settings.normalizedNamed,
-    normalizedName := Settings.normalizedNamed,
+    description := Settings.facadeName,
     scalaVersion := Versions.scalaPrimary,
     crossScalaVersions := Versions.scalaOlder
   )
-
+// My Github
 homepage := Some(url("https://github.com/aleastChs"))
 
+// MIT License
 licenses += (Settings.license, url(Settings.licenseURL))
 
 scmInfo := Some(ScmInfo(
@@ -39,6 +43,7 @@ scmInfo := Some(ScmInfo(
   Some("scm:git:git@github.com:aleastChs/scalajs-google-charts.git")))
 
 
+// EXTRA POM
 pomExtra :=
   <licenses>
     <license>
