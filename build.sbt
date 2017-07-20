@@ -25,7 +25,7 @@ lazy val root = (project in file("."))
     publishSettings,                                      // enable publish settings
     sbtPlugin := true,                                    // to make an auto plugin, create a project and configure sbtPlugin to true
     name := Settings.facadeName,                          // name (same as <user>/<repo>/<NAME> on bintray)
-    description := Settings.facadeName,                   // description
+    description := "Scala-friendly Google Charts Facades",// description
     scalaVersion := Versions.scalaPrimary,                // scala version for root
     crossScalaVersions := Versions.scalaOlder             // cross scala ver. for rott
   )
