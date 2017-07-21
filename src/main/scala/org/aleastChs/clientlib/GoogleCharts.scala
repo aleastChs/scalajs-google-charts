@@ -3,13 +3,12 @@
   */
 
 import scala.scalajs.js
-import js.annotation.{JSName}
+import js.annotation.{JSName, JSGlobal}
 
 
 package google {
 
-
-  @JSName("google.charts")
+  @JSGlobal("google.charts")
   @js.native
   object charts extends js.Object {
     def load(): Unit = js.native
@@ -17,13 +16,13 @@ package google {
     def setOnLoadCallback(): Unit = js.native
   }
 
-  @JSName("google.QueryResponse")
+  @JSGlobal("google.QueryResponse")
   @js.native
   class QueryResponse extends js.Object {
 
   }
 
-  @JSName("google.visualization")
+  @JSGlobal("google.visualization")
   @js.native
   object visualization extends js.Object{
     // STATIC METHODS
