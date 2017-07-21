@@ -23,9 +23,9 @@ lazy val publishSettings = Seq(
 // ROOT
 lazy val root = (project in file("."))
   .enablePlugins(ScalaJSPlugin)                           // enable scalajs plugin
-  .settings(commonSettings)                               // enable commonsettings
+  .settings(commonSettings ++ BintrayPlugin.bintrayPublishSettings: _*)                               // enable commonsettings
   .settings(
-    publishSettings ++ BintrayPlugin.bintrayPublishSettings: _*
+    publishSettings
   )// enable publish settings)
   .settings(
     sbtPlugin := true,                                    // to make an auto plugin, create a project and configure sbtPlugin to true
