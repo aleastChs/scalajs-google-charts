@@ -8,13 +8,13 @@ lazy val commonSettings = Seq(
 )
 
 // PUBLISHING
-
+lazy val bintrayPublishIvyStyle = settingKey[Boolean]("=== !publishMavenStyle") //workaround for sbt-bintray bug
 // PUBLISHING-SETTINGS
 lazy val publishSettings = Seq(
   bintrayRepository := Settings.bintrayRepo,              // bintray repo name    (<user>/<repo> on bintray)
   bintrayOrganization := Some(Settings.bintrayOrg),       // bintray organization (<user> on bintray)
   licenses += (Settings.license, url(Settings.licenseURL)),   // license for this repo
-  publishMavenStyle := false                               // publish in Ivy-format style
+  bintrayPublishIvyStyle := true                               // publish in Ivy-format style
 )
 
 // ROOT
