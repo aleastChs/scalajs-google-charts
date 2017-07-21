@@ -2,7 +2,10 @@
 Type-safe and Scala-friendly facade-library over Google Charts
 
 # Current version
-0.2.3
+0.2.4
+
+# Warning
+Versions Below 1.0.0 means it is unstable
 
 # About 
 I wanted to use Timeline Chart (https://developers.google.com/chart/interactive/docs/gallery/timeline) 

@@ -23,9 +23,11 @@ lazy val publishSettings = Seq(
 // ROOT
 lazy val root = (project in file("."))
   .enablePlugins(ScalaJSPlugin)                           // enable scalajs plugin
+  .settings(commonSettings)                               // enable commonsettings
   .settings(
-    commonSettings,                                       // enable commonsettings
-    publishSettings,                                      // enable publish settings
+    publishSettings ++ BintrayPlugin.bintrayPublishSettings: _*
+  )// enable publish settings)
+  .settings(
     sbtPlugin := true,                                    // to make an auto plugin, create a project and configure sbtPlugin to true
     name := Settings.facadeName,                          // name (same as <user>/<repo>/<NAME> on bintray)
     description := "Scala-friendly Google Charts Facades",// description
