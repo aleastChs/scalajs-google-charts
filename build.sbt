@@ -15,7 +15,7 @@ lazy val publishSettings = Seq(
   bintrayReleaseOnPublish := true,
   bintrayPackage := Settings.facadeName,
   bintrayRepository := Settings.bintrayRepo,              // bintray repo name    (<user>/<repo> on bintray)
-  bintrayOrganization := Some(Settings.bintrayOrg),       // bintray organization (<user> on bintray)
+  bintrayOrganization := None,       // bintray organization (<user> on bintray)
   licenses += (Settings.license, url(Settings.licenseURL)),   // license for this repo
   bintrayPublishIvyStyle := true                               // publish in Ivy-format style
 )

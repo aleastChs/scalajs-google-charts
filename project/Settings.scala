@@ -4,10 +4,10 @@ object Settings {
   // Repo:            aleastchs/aleastChs-releases
   // Package Name:    aleastchs/aleastChs-releases/scalajs-google-charts
 
-  val bintrayOrg = "aleastchs"                                      // My bintray user-name
+  val bintrayOrg = "org.aleastchs"                                  // My bintray user-name
   val bintrayRepo = "aleastChs-releases"                            // One Repo of mine on Bintray
 
-  val organizationName = "aleastChs"                            // Placeholder
+  val organizationName = "org.aleastChs"                            // Placeholder
   val homePageName = "https://github.com/aleastChs"                 // My github website
 
   val facadeName = "scalajs-google-charts"                          // plugin name
