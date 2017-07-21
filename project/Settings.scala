@@ -7,7 +7,7 @@ object Settings {
   val bintrayOrg = "aleastchs"                                      // My bintray user-name
   val bintrayRepo = "aleastChs-releases"                            // One Repo of mine on Bintray
 
-  val organizationName = "org.aleastChs"                            // Placeholder
+  val organizationName = "aleastChs"                            // Placeholder
   val homePageName = "https://github.com/aleastChs"                 // My github website
 
   val facadeName = "scalajs-google-charts"                          // plugin name
