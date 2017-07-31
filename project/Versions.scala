@@ -9,5 +9,5 @@ trait ScalaJS {
   // bintray do not use SNAPSHOT
   // todo on update:
   //                What do with version? Must change on every publish?
-  val scalaJSGoogleCharts = "0.2.11"
+  val scalaJSGoogleCharts = "0.2.12"
 }
