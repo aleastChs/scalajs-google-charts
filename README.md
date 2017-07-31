@@ -2,7 +2,7 @@
 Type-safe and Scala-friendly facade-library over Google Charts
 
 # Current version
-0.2.12
+0.2.13
 
 # Warning
 Versions Below 1.0.0 means it is unstable
