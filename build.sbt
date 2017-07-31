@@ -12,7 +12,7 @@ lazy val bintrayPublishIvyStyle = settingKey[Boolean]("=== !publishMavenStyle") 
 // PUBLISHING-SETTINGS
 lazy val publishSettings = Seq(
   bintrayVersionAttributes := Map(),
-  bintrayReleaseOnPublish := true,
+  bintrayReleaseOnPublish := false,
   bintrayPackage := Settings.facadeName,
   bintrayRepository := Settings.bintrayRepo,              // bintray repo name    (<user>/<repo> on bintray)
   bintrayOrganization := None,       // bintray organization (<user> on bintray)
@@ -23,17 +23,15 @@ lazy val publishSettings = Seq(
 // ROOT
 lazy val root = (project in file("."))
   .enablePlugins(ScalaJSPlugin)                           // enable scalajs plugin
-  .settings(commonSettings ++ BintrayPlugin.bintrayPublishSettings: _*)                               // enable commonsettings
   .settings(
-    publishSettings
-  )// enable publish settings)
-  .settings(
-    sbtPlugin := true,                                    // to make an auto plugin, create a project and configure sbtPlugin to true
-    name := Settings.facadeName,                          // name (same as <user>/<repo>/<NAME> on bintray)
-    description := "Scala-friendly Google Charts Facades",// description
-    scalaVersion := Versions.scalaPrimary,                // scala version for root
-    crossScalaVersions := Versions.scalaOlder             // cross scala ver. for rott
-  )
+  commonSettings,
+  publishSettings,
+  sbtPlugin := true,                                    // to make an auto plugin, create a project and configure sbtPlugin to true
+  name := Settings.facadeName,                          // name (same as <user>/<repo>/<NAME> on bintray)
+  description := "Scala-friendly Google Charts Facades",// description
+  scalaVersion := Versions.scalaPrimary,                // scala version for root
+  crossScalaVersions := Versions.scalaOlder             // cross scala ver. for rott
+)
 // My Github
 homepage := Some(url(Settings.homePageName))
 
