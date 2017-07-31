@@ -13,7 +13,7 @@ lazy val bintrayPublishIvyStyle = settingKey[Boolean]("=== !publishMavenStyle") 
 lazy val publishSettings = Seq(
   bintrayVersionAttributes := Map(),
   bintrayReleaseOnPublish := false,
-  bintrayPackage := Settings.facadeName,
+  //bintrayPackage := Settings.facadeName,
   bintrayRepository := Settings.bintrayRepo,              // bintray repo name    (<user>/<repo> on bintray)
   bintrayOrganization := None,       // bintray organization (<user> on bintray)
   licenses += (Settings.license, url(Settings.licenseURL)),   // license for this repo
@@ -29,8 +29,9 @@ lazy val root = (project in file("."))
   sbtPlugin := true,                                    // to make an auto plugin, create a project and configure sbtPlugin to true
   name := Settings.facadeName,                          // name (same as <user>/<repo>/<NAME> on bintray)
   description := "Scala-friendly Google Charts Facades",// description
-  scalaVersion := Versions.scalaPrimary,                // scala version for root
-  crossScalaVersions := Versions.scalaOlder             // cross scala ver. for rott
+  scalaVersion := Versions.scalaPrimary
+  // scala version for root
+  //crossScalaVersions := Versions.scalaOlder             // cross scala ver. for rott
 )
 // My Github
 homepage := Some(url(Settings.homePageName))
