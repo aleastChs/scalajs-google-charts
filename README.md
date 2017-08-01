@@ -17,7 +17,7 @@ libraryDependencies += "org.aleastChs" % "scalajs-google-charts_<Your Scala Vers
 Now You are able to use the Facade with imports in .scala-files
 Example.scala:
 ```
-import google.visualization.Timeline
+import aleastchs.facade.google.visualization.Timeline
 object Example {
     val timeline = new Timeline("some Div")
 }
@@ -26,6 +26,7 @@ object Example {
 or
 
 ```
+import aleastchs.facade.google
 object Example {
     val timeline = new google.visualization.Timeline("some Div")
 }
