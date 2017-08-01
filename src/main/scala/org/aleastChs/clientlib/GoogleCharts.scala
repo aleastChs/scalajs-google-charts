@@ -75,7 +75,7 @@ package aleastchs {
 
           def addRows(rows: js.Array[js.Array[js.Any]]): Int = js.native
 
-          def addRows(numOrArray: js.Any): Int = js.native
+          def addRows(numOrArray: Int): Int = js.native
 
           def addRow(row: js.Array[js.Any]): Int = js.native
 
@@ -109,7 +109,35 @@ package aleastchs {
 
           def getProperties(rowIndex: Int, columnIndex: Int): js.Object = js.native
 
+          def getProperty(rowIndex: Int, columnIndex: Int, name: String): js.Any = js.native
+
+          def getRowProperties(rowIndex: Int): js.Object = js.native
+
+          def getRowProperty(rowIndex: Int, name: String): js.Any = js.native
+
+          def getSortedRows(singleNumber: Int): js.Array[Int] = js.native
+
+          def getSortedRows(singleObject: js.Object): js.Array[Int] = js.native
+
+          def getSortedRows(numberOrObjectArray: js.Array[js.Any]): js.Array[Int] = js.native
+
           def getTableProperties(): js.Object = js.native
+
+          def getTableProperty(name: String): js.Any = js.native
+
+          def getValue(rowIndex: Int, columnIndex: Int): js.Object = js.native
+
+          def insertColumn(columnIndex: Int, `type`: String): Unit = js.native
+
+          def insertColumn(columnIndex: Int, `type`: String, label: String = "", id: String = ""): Unit = js.native
+
+          def insertRows(rowIndex: Int, numberOrArray: Int): Unit = js.native
+
+          def insertRows(rowIndex: Int, numberOrArray: js.Array[js.Array[js.Any]]): Unit = js.native
+
+          def removeColumn(columnIndex: Int): Unit = js.native
+
+          def removeColumns(columnIndex: Int, numberOfColumns: Int): Unit = js.native
 
           def removeRow(rowIndex: Int): Unit = js.native
 
