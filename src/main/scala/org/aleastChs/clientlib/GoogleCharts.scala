@@ -52,11 +52,21 @@ package aleastchs {
 
         }
 
+        @JSName("aleastchs.facade.google.visualization.Gauge")
+        @js.native
+        class Gauge(container: js.Dynamic) extends js.Object {
+          def draw(data: DataTable, options: js.Object): Unit = js.native
+          def draw(data: DataView, options: js.Object): Unit = js.native
+
+          def clearChart(): Unit = js.native
+        }
+
 
         @JSName("aleastchs.facade.google.visualization.Timeline")
         @js.native
         class Timeline(container: js.Dynamic) extends js.Object {
           def draw(data: DataTable, options: js.Object): Unit = js.native
+          def draw(data: DataView, options: js.Object): Unit = js.native
 
           def clearChart(): Unit = js.native
 
@@ -186,6 +196,7 @@ package aleastchs {
 
 
         @JSName("aleastchs.facade.google.visualization.DataView")
+        @js.native
         class DataView (
                        data: DataTrait,
                        viewAsJson: String = ""
