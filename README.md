@@ -38,8 +38,5 @@ so I started implement it under googleTimeSeries branch.
 Then I realised that somebody else also wanted to use Google Charts 
 for their project so it would be nice to only add a libraryDependency!
 
-I got much help from Corey Auger and his scalajs-google-maps library!
-(see: https://github.com/coreyauger/scalajs-google-maps)
-
 # Contribute
 Feel free to help me with this library
