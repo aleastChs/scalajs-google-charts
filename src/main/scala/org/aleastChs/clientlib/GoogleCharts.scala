@@ -111,6 +111,8 @@ package aleastchs {
 
           def getTableProperties(): js.Object = js.native
 
+          def removeRow(rowIndex: Int): Unit = js.native
+
           def removeRows(rowIndex: Int, numberOfRows: Int): Unit = js.native
 
           def setCell(rowIndex: Int, columnIndex: Int): Unit = js.native

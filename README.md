@@ -1,6 +1,12 @@
 # scalajs-google-charts
 Type-safe and Scala-friendly facade-library over Google Charts
 
+# Current version
+0.3.0
+
+# Warning!
+Versions Below 1.0.0 means it is unstable
+
 # How To Use
 In {root}/build.sbt add:
 ```
@@ -24,11 +30,6 @@ object Example {
     val timeline = new google.visualization.Timeline("some Div")
 }
 ```
-# Current version
-0.2.13
-
-# Warning
-Versions Below 1.0.0 means it is unstable
 
 # About 
 I wanted to use Timeline Chart (https://developers.google.com/chart/interactive/docs/gallery/timeline) 
