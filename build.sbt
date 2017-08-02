@@ -1,6 +1,3 @@
-import sbt.Keys._
-import sbt._
-
 // COMMONSETTINGS
 lazy val commonSettings = Seq(
   version in ThisBuild := Versions.scalaJSGoogleCharts,   // version of current scalajs-google-charts facade

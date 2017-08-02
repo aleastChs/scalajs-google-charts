@@ -11,8 +11,7 @@ Type-safe and Scala-friendly facade-library over Google Charts
 
 Versions That I've used in other projects:
 ```
-Version 0.2.13,
-Version 0.3.2
+Version 0.4.0
 ```
 # How To Use
 In {root}/build.sbt add:
@@ -24,7 +23,7 @@ libraryDependencies += "org.aleastChs" % "scalajs-google-charts_<Your Scala Vers
 Now You are able to use the Facade with imports in .scala-files
 Example.scala:
 ```
-import aleastchs.facade.google.visualization.Timeline
+import aleastchs.googleCharts.google.visualization.Timeline
 object Example {
     val timeline = new Timeline("some Div")
 }

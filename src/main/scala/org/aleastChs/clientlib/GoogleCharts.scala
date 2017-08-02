@@ -8,7 +8,7 @@ import js.annotation.{JSName, JSGlobal}
 
 package aleastchs {
 
-  package facade {
+  package googleCharts {
 
     @JSGlobal("google")
     @js.native
@@ -22,15 +22,12 @@ package aleastchs {
 
         @js.native
         class Bar extends js.Object {
-          import aleastchs.facade.google.visualization.DataView
-          import aleastchs.facade.google.visualization.DataTable
-
           def clearChart(): Unit = js.native
           // Todo search for docs
           def convertOptions(options: js.Object): js.Object = js.native
 
-          def draw(data: DataView, options: js.Object): Unit = js.native
-          def draw(data: DataTable, options: js.Object): Unit = js.native
+          def draw(data: google.visualization.DataView, options: js.Object): Unit = js.native
+          def draw(data: google.visualization.DataTable, options: js.Object): Unit = js.native
 
           def getAction(actionID: js.Object): js.Object = js.native
 
