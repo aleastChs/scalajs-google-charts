@@ -10,16 +10,16 @@ package aleastchs {
 
   package facade {
 
-    package google {
+    @JSGlobal("google")
+    @js.native
+    object google extends js.Object {
 
-      @JSGlobal("google.charts")
       @js.native
       object charts extends js.Object {
         def load(): Unit = js.native
 
         def setOnLoadCallback(): Unit = js.native
 
-        @JSName("google.charts.Bar")
         @js.native
         class Bar extends js.Object {
           import aleastchs.facade.google.visualization.DataView
@@ -60,13 +60,11 @@ package aleastchs {
         }
       }
 
-      @JSGlobal("google.QueryResponse")
       @js.native
       class QueryResponse extends js.Object {
 
       }
 
-      @JSGlobal("google.visualization")
       @js.native
       object visualization extends js.Object {
         // STATIC METHODS
@@ -78,7 +76,6 @@ package aleastchs {
         def drawToolbar(): Unit = js.native
 
         // CHARTS
-        @JSName("google.visualization.AnnotationChart")
         @js.native
         class AnnotationChart(container: js.Dynamic) extends js.Object {
           def clearChart(): Unit = js.native
@@ -99,8 +96,6 @@ package aleastchs {
           def showDataColumns(columnIndexes: js.Array[Int]): Unit = js.native
         }
 
-
-        @JSName("google.visualization.AreaChart")
         @js.native
         class AreaChart(container: js.Dynamic) extends js.Object {
           def clearChart(): Unit = js.native
@@ -135,7 +130,6 @@ package aleastchs {
           def setSelection(selection_array: js.Object): Unit = js.native
         }
 
-        @JSName("google.visualization.BarChart")
         @js.native
         class BarChart(container: js.Dynamic) extends js.Object {
           def clearChart(): Unit = js.native
@@ -171,15 +165,11 @@ package aleastchs {
         }
 
 
-
-
-        @JSName("google.visualization.ColumnChart")
         @js.native
         class ColumnChart(container: js.Dynamic) extends js.Object {
 
         }
 
-        @JSName("google.visualization.Gauge")
         @js.native
         class Gauge(container: js.Dynamic) extends js.Object {
           def draw(data: DataTable, options: js.Object): Unit = js.native
@@ -201,7 +191,6 @@ package aleastchs {
 
         }
 
-        @JSName("google.visualization.DataTable")
         @js.native
         class DataTable(
                          optional_data: String = "",
@@ -321,7 +310,6 @@ package aleastchs {
 
 
         // Todo Test data parameter
-        @JSName("google.visualization.DataView")
         @js.native
         class DataView (
                        data: js.Any,
@@ -394,7 +382,6 @@ package aleastchs {
           def toJSON(): String = js.native
         }
 
-        @JSName("google.visualization.events")
         @js.native
         class events extends js.Object {
           // todo Fix source_visualization and handling_function
@@ -406,8 +393,6 @@ package aleastchs {
           //def trigger(source_visualization: _, event_name: String, event_args: _): Unit = js.native
         }
 
-
-        @JSName("google.visualization.errors")
         @js.native
         object errors extends js.Object {
           def addError(container: js.Dynamic, message: String, opt_detailedMessage: String, opt_options: js.Object): Unit = js.native
