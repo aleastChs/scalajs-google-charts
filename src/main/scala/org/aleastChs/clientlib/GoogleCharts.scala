@@ -12,32 +12,75 @@ package aleastchs {
 
     package google {
 
-      @JSGlobal("aleastchs.facade.google.charts")
+
+
+      @JSGlobal("google.charts")
       @js.native
       object charts extends js.Object {
         def load(): Unit = js.native
 
         def setOnLoadCallback(): Unit = js.native
+
+        @JSName("google.charts.Bar")
+        @js.native
+        class Bar extends js.Object {
+          import aleastchs.facade.google.visualization.DataView
+          import aleastchs.facade.google.visualization.DataTable
+
+          def clearChart(): Unit = js.native
+          // Todo search for docs
+          def convertOptions(options: js.Object): js.Object = js.native
+
+          def draw(data: DataView, options: js.Object): Unit = js.native
+          def draw(data: DataTable, options: js.Object): Unit = js.native
+
+          def getAction(actionID: js.Object): js.Object = js.native
+
+          def getBoundingBox(id: js.Any): js.Object = js.native
+
+          def getChartAreaBoundingBox(): js.Object = js.native
+
+          def getChartLayoutInterface(): js.Object = js.native
+          // Todo fix parameters at HAxis and VAxis
+          def getHAxisValue(position: js.Any, optional_axis_index: js.Any): Int = js.native
+
+          def getImageURI(): String = js.native
+
+          def getSelection(): js.Array[js.Any] = js.native
+
+          def getVAxisValue(position: js.Any, optional_axis_index: js.Any): Int = js.native
+          // Todo fix parameters at XLoc and YLoc
+          def getXLocation(position: js.Any, optional_axis_index: js.Any): Int = js.native
+
+          def getYLocation(position: js.Any, optional_axis_index: js.Any): Int = js.native
+
+          def removeAction(actionID: js.Object): Unit = js.native
+
+          def setAction(action: js.Object): Unit = js.native
+
+          def setSelection(selection_array: js.Object): Unit = js.native
+        }
       }
 
-      @JSGlobal("aleastchs.facade.google.QueryResponse")
+      @JSGlobal("google.QueryResponse")
       @js.native
       class QueryResponse extends js.Object {
 
       }
 
-      @JSGlobal("aleastchs.facade.google.visualization")
+      @JSGlobal("google.visualization")
       @js.native
       object visualization extends js.Object {
         // STATIC METHODS
         def arrayToDataTable(twoDArray: js.Array[js.Array[js.Any]], opt_firstRowIsData: Boolean = false): DataTable = js.native
+        def arrayToDataTable(): Unit = js.native
 
         def drawChart(chart_JSON_or_object: js.Any): Unit = js.native
 
         def drawToolbar(): Unit = js.native
 
         // CHARTS
-        @JSName("aleastchs.facade.google.visualization.AnnotationChart")
+        @JSName("google.visualization.AnnotationChart")
         @js.native
         class AnnotationChart(container: js.Dynamic) extends js.Object {
           def clearChart(): Unit = js.native
@@ -58,16 +101,87 @@ package aleastchs {
           def showDataColumns(columnIndexes: js.Array[Int]): Unit = js.native
         }
 
-        def arrayToDataTable(): Unit = js.native
+
+        @JSName("google.visualization.AreaChart")
+        @js.native
+        class AreaChart(container: js.Dynamic) extends js.Object {
+          def clearChart(): Unit = js.native
+
+          def draw(data: DataView, options: js.Object): Unit = js.native
+          def draw(data: DataTable, options: js.Object): Unit = js.native
+
+          def getAction(actionID: js.Object): js.Object = js.native
+
+          def getBoundingBox(id: js.Any): js.Object = js.native
+
+          def getChartAreaBoundingBox(): js.Object = js.native
+
+          def getChartLayoutInterface(): js.Object = js.native
+          // Todo fix parameters at HAxis and VAxis
+          def getHAxisValue(position: js.Any, optional_axis_index: js.Any): Int = js.native
+
+          def getImageURI(): String = js.native
+
+          def getSelection(): js.Array[js.Any] = js.native
+
+          def getVAxisValue(position: js.Any, optional_axis_index: js.Any): Int = js.native
+          // Todo fix parameters at XLoc and YLoc
+          def getXLocation(position: js.Any, optional_axis_index: js.Any): Int = js.native
+
+          def getYLocation(position: js.Any, optional_axis_index: js.Any): Int = js.native
+
+          def removeAction(actionID: js.Object): Unit = js.native
+
+          def setAction(action: js.Object): Unit = js.native
+
+          def setSelection(selection_array: js.Object): Unit = js.native
+        }
+
+        @JSName("google.visualization.BarChart")
+        @js.native
+        class BarChart(container: js.Dynamic) extends js.Object {
+          def clearChart(): Unit = js.native
+
+          def draw(data: DataView, options: js.Object): Unit = js.native
+          def draw(data: DataTable, options: js.Object): Unit = js.native
+
+          def getAction(actionID: js.Object): js.Object = js.native
+
+          def getBoundingBox(id: js.Any): js.Object = js.native
+
+          def getChartAreaBoundingBox(): js.Object = js.native
+
+          def getChartLayoutInterface(): js.Object = js.native
+          // Todo fix parameters at HAxis and VAxis
+          def getHAxisValue(position: js.Any, optional_axis_index: js.Any): Int = js.native
+
+          def getImageURI(): String = js.native
+
+          def getSelection(): js.Array[js.Any] = js.native
+
+          def getVAxisValue(position: js.Any, optional_axis_index: js.Any): Int = js.native
+          // Todo fix parameters at XLoc and YLoc
+          def getXLocation(position: js.Any, optional_axis_index: js.Any): Int = js.native
+
+          def getYLocation(position: js.Any, optional_axis_index: js.Any): Int = js.native
+
+          def removeAction(actionID: js.Object): Unit = js.native
+
+          def setAction(action: js.Object): Unit = js.native
+
+          def setSelection(selection_array: js.Object): Unit = js.native
+        }
 
 
-        @JSName("aleastchs.facade.google.visualization.ColumnChart")
+
+
+        @JSName("google.visualization.ColumnChart")
         @js.native
         class ColumnChart(container: js.Dynamic) extends js.Object {
 
         }
 
-        @JSName("aleastchs.facade.google.visualization.Gauge")
+        @JSName("google.visualization.Gauge")
         @js.native
         class Gauge(container: js.Dynamic) extends js.Object {
           def draw(data: DataTable, options: js.Object): Unit = js.native
@@ -77,7 +191,7 @@ package aleastchs {
         }
 
 
-        @JSName("aleastchs.facade.google.visualization.Timeline")
+        @JSName("google.visualization.Timeline")
         @js.native
         class Timeline(container: js.Dynamic) extends js.Object {
           def draw(data: DataTable, options: js.Object): Unit = js.native
@@ -91,7 +205,7 @@ package aleastchs {
 
         sealed trait DataTrait
 
-        @JSName("aleastchs.facade.google.visualization.DataTable")
+        @JSName("google.visualization.DataTable")
         @js.native
         class DataTable(
                          optional_data: String = "",
@@ -210,7 +324,7 @@ package aleastchs {
         }
 
 
-        @JSName("aleastchs.facade.google.visualization.DataView")
+        @JSName("google.visualization.DataView")
         @js.native
         class DataView (
                        data: DataTrait,
@@ -283,7 +397,7 @@ package aleastchs {
           def toJSON(): String = js.native
         }
 
-        @JSName("aleastchs.facade.google.visualization.events")
+        @JSName("google.visualization.events")
         @js.native
         class events extends js.Object {
           // todo Fix source_visualization and handling_function
@@ -296,7 +410,7 @@ package aleastchs {
         }
 
 
-        @JSName("aleastchs.facade.google.visualization.errors")
+        @JSName("google.visualization.errors")
         @js.native
         object errors extends js.Object {
           def addError(container: js.Dynamic, message: String, opt_detailedMessage: String, opt_options: js.Object): Unit = js.native
