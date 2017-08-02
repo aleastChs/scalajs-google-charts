@@ -178,8 +178,6 @@ package aleastchs {
           def clearChart(): Unit = js.native
         }
 
-
-        @JSName("google.visualization.Timeline")
         @js.native
         class Timeline(container: js.Dynamic) extends js.Object {
           def draw(data: DataTable, options: js.Object): Unit = js.native
