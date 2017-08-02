@@ -12,6 +12,7 @@ package aleastchs {
 
     package google {
 
+      import scala.scalajs.js.annotation.ScalaJSDefined
 
 
       @JSGlobal("google.charts")
@@ -203,7 +204,8 @@ package aleastchs {
 
         }
 
-        sealed trait DataTrait
+        @ScalaJSDefined
+        sealed trait DataTrait extends js.Object
 
         @JSName("google.visualization.DataTable")
         @js.native

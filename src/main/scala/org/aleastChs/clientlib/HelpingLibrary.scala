@@ -8,7 +8,7 @@ package aleastchs {
   package facade {
     package helpers {
       package google {
-        class AnnotationChart(
+        class AnnotationChartOption(
                                allowHtml: Boolean = false,
                                allValuesSuffix: String = null,
                                annotationsWidth: Int = 25,
@@ -24,15 +24,13 @@ package aleastchs {
                                displayZoomButtons: Boolean = true,
                                fill: Int = 0,
                                legendPosition: String = "sameRow",
-                               max: Int = null,
-                               min: Int = null,
+                               max: Int = 100,
+                               min: Int = 0,
                                numberFormats: String = null,
                                scaleColumns: js.Array[Int] = null,
                                scaleFormat: String = "#",
                                scaleType: String = "fixed",
                                table: js.Object = null,
-                               sortAscending: Boolean = false,
-                               sortColumn: Int = 0,
                                thickness: Int = 0,
                                zoomEndTime: js.Date = null,
                                zoomStartTime: js.Date = null
@@ -60,17 +58,13 @@ package aleastchs {
             scaleFormat = this.scaleFormat,
             scaleType = this.scaleType,
             table = this.table,
-            table = js.Dynamic.literal(
-              sortAscending = this.sortAscending,
-              sortColumn = this.sortColumn
-            ),
             thickness = this.thickness,
             zoomEndTime = this.zoomEndTime,
             zoomStartTime = this.zoomStartTime
           )
         }
 
-        object AnnotationChart {
+        object AnnotationChartOption {
           def apply(
                      allowHtml: Boolean = false,
                      allValuesSuffix: String = null,
@@ -87,8 +81,8 @@ package aleastchs {
                      displayZoomButtons: Boolean = true,
                      fill: Int = 0,
                      legendPosition: String = "sameRow",
-                     max: Int = null,
-                     min: Int = null,
+                     max: Int = 100,
+                     min: Int = 0,
                      numberFormats: String = null,
                      scaleColumns: js.Array[Int] = null,
                      scaleFormat: String = "#",
@@ -99,7 +93,7 @@ package aleastchs {
                      thickness: Int = 0,
                      zoomEndTime: js.Date = null,
                      zoomStartTime: js.Date = null
-                   ): AnnotationChart = new AnnotationChart(allowHtml, allValuesSuffix, annotationsWidth, colors, dateFormat, displayAnnotations, displayAnnotationsFilter, displayDateBarSeparator, displayExactValues, displayLegendDots, displayLegendValues, displayRangeSelector, displayZoomButtons, fill, legendPosition, max, min, numberFormats, scaleColumns, scaleFormat, scaleType, table, sortAscending, sortColumn, thickness, zoomEndTime, zoomStartTime)
+                   ): AnnotationChartOption = new AnnotationChartOption(allowHtml, allValuesSuffix, annotationsWidth, colors, dateFormat, displayAnnotations, displayAnnotationsFilter, displayDateBarSeparator, displayExactValues, displayLegendDots, displayLegendValues, displayRangeSelector, displayZoomButtons, fill, legendPosition, max, min, numberFormats, scaleColumns, scaleFormat, scaleType, table, thickness, zoomEndTime, zoomStartTime)
         }
 
         class GaugeOption(
@@ -107,20 +101,20 @@ package aleastchs {
                            easing: String = "linear",
                            forceIFrame: Boolean = false,
                            greenColor: String = "#109618",
-                           greenFrom: Int = null,
-                           greenTo: Int = null,
-                           height: Int = null,
+                           greenFrom: Int = 25,
+                           greenTo: Int = 75,
+                           height: Int = 200,
                            majorTicks: js.Array[String] = null,
                            max: Int = 100,
                            min: Int = 0,
                            minorTicks: Int = 2,
                            redColor: String = "#DC3912",
-                           redFrom: Int = null,
-                           redTo: Int = null,
-                           width: Int = null,
+                           redFrom: Int = 90,
+                           redTo: Int = 100,
+                           width: Int = 200,
                            yellowColor: String = "#FF9900",
-                           yellowFrom: Int = null,
-                           yellowTo: Int = null
+                           yellowFrom: Int = 75,
+                           yellowTo: Int = 90
                          ) {
 
           def toDynamic: js.Object = js.Dynamic.literal(
@@ -154,23 +148,21 @@ package aleastchs {
                      easing: String = "linear",
                      forceIFrame: Boolean = false,
                      greenColor: String = "#109618",
-                     greenFrom: Int = null,
-                     greenTo: Int = null,
-                     height: Int = null,
+                     greenFrom: Int = 25,
+                     greenTo: Int = 75,
+                     height: Int = 200,
                      majorTicks: js.Array[String] = null,
                      max: Int = 100,
                      min: Int = 0,
                      minorTicks: Int = 2,
                      redColor: String = "#DC3912",
-                     redFrom: Int = null,
-                     redTo: Int = null,
-                     width: Int = null,
+                     redFrom: Int = 90,
+                     redTo: Int = 100,
+                     width: Int = 200,
                      yellowColor: String = "#FF9900",
-                     yellowFrom: Int = null,
-                     yellowTo: Int = null
+                     yellowFrom: Int = 75,
+                     yellowTo: Int = 90
                    ): GaugeOption = new GaugeOption(duration, easing, forceIFrame, greenColor, greenFrom, greenTo, height, majorTicks, max, min, minorTicks, redColor, redFrom, redTo, width, yellowColor, yellowFrom, yellowTo)
-
-
         }
 
         class TimelineOption {
