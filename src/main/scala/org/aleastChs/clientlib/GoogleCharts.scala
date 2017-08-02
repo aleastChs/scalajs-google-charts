@@ -12,9 +12,6 @@ package aleastchs {
 
     package google {
 
-      import scala.scalajs.js.annotation.ScalaJSDefined
-
-
       @JSGlobal("google.charts")
       @js.native
       object charts extends js.Object {
