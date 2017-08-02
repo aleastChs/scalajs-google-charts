@@ -204,14 +204,11 @@ package aleastchs {
 
         }
 
-        @ScalaJSDefined
-        sealed trait DataTrait extends js.Object
-
         @JSName("google.visualization.DataTable")
         @js.native
         class DataTable(
                          optional_data: String = "",
-                         optional_version: String = "") extends js.Object with DataTrait {
+                         optional_version: String = "") extends js.Object {
           def addColumn(`type`: String, opt_label: String = "", opt_id: String = ""): Int = js.native
 
           def addColumn(description_object: Array[String]): Int = js.native
@@ -326,12 +323,13 @@ package aleastchs {
         }
 
 
+        // Todo Test data parameter
         @JSName("google.visualization.DataView")
         @js.native
         class DataView (
-                       data: DataTrait,
+                       data: js.Any,
                        viewAsJson: String = ""
-                       ) extends js.Object with DataTrait {
+                       ) extends js.Object {
           def getColumnId(columnIndex: Int): String = js.native
 
           def getColumnLabel(columnIndex: Int): String = js.native
