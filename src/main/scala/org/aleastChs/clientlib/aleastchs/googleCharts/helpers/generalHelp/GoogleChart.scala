@@ -5,7 +5,6 @@
 package aleastchs.googleCharts.helpers.generalHelp
 
 import scala.scalajs.js
-import aleastchs.googleCharts.helpers.generalHelp.DataTableAPI
 
 @js.native
 trait GoogleChartTrait extends js.Object {
