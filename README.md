@@ -11,7 +11,8 @@ Type-safe and Scala-friendly facade-library over Google Charts
 
 Versions That I've used in other projects:
 ```
-Version 0.4.0
+Version 0.4.0,
+Version 0.4.1
 ```
 # How To Use
 In {root}/build.sbt add:
