@@ -11,8 +11,8 @@ Type-safe and Scala-friendly facade-library over Google Charts
 
 Versions That I've used in other projects:
 ```
-Version 0.4.0,
-Version 0.4.1
+scalajs-google-charts v0.4.0 with Scala 2.11 and sbt 0.13.x,
+scalajs-google-charts v0.4.1 with Scala 2.11 and sbt 0.13.x
 ```
 # How To Use
 In {root}/build.sbt add:
