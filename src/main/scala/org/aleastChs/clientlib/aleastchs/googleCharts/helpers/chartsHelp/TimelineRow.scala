@@ -9,12 +9,12 @@ import scala.scalajs.js
   */
 
 class TimelineRow(
-                   rowLabel: String,
-                   optionalBarLabel: String,
-                   optionalTooltip: Tooltips,
-                   startDate: js.Date,
-                   endDate: js.Date,
-                   cases: Int = 0
+                   val rowLabel: String,
+                   val optionalBarLabel: String,
+                   val optionalTooltip: Tooltips,
+                   val startDate: js.Date,
+                   val endDate: js.Date,
+                   val cases: Int = 0
                  ) {
 
   // TODO: ensure no side effects

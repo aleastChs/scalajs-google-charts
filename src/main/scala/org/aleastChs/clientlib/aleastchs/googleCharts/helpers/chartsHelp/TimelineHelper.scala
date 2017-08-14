@@ -8,9 +8,9 @@ import scala.scalajs.js
 import aleastchs.googleCharts.google
 
 class TimelineHelper(
-                      data:     google.visualization.DataTable,
-                      timeline: google.visualization.Timeline,
-                      options:  TimelineOption
+                      val data:     google.visualization.DataTable,
+                      val timeline: google.visualization.Timeline,
+                      val options:  TimelineOption
                     ) {
 
   // draw()-method
