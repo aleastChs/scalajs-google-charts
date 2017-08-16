@@ -17,8 +17,12 @@ package aleastchs {
       @js.native
       object charts extends js.Object {
         def load(): Unit = js.native
+        def load(loading: String): Unit = js.native
+        def load(loading: String, dynamic: js.Dynamic): Unit = js.native
 
         def setOnLoadCallback(): Unit = js.native
+
+        def setOnLoadCallback(callback: _ => Unit ): Unit = js.native
 
         @js.native
         class Bar extends js.Object {
