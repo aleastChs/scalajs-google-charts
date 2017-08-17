@@ -18,7 +18,7 @@ package aleastchs {
       object charts extends js.Object {
         def load(): Unit = js.native
         def load(loading: String): Unit = js.native
-        def load(loading: String, dynamic: js.Dynamic): Unit = js.native
+        def load(loading: String, loadObject: js.Object): Unit = js.native
 
         def setOnLoadCallback(): Unit = js.native
 
@@ -181,6 +181,8 @@ package aleastchs {
 
         @js.native
         class Timeline(container: js.Dynamic) extends js.Object {
+          def draw(data: DataTable): Unit = js.native
+          def draw(data: DataView): Unit = js.native
           def draw(data: DataTable, options: js.Object): Unit = js.native
           def draw(data: DataView, options: js.Object): Unit = js.native
 
