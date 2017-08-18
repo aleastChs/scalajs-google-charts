@@ -2,9 +2,9 @@
 Type-safe and Scala-friendly facade-library over Google Charts
 
 # Current version
-0.4.4.Test
+0.4.4.Test **Published!**
 
-<a href='https://bintray.com/aleastchs/aleastChs-releases/scalajs-google-charts/0.4.1/link'><img src='https://api.bintray.com/packages/aleastchs/aleastChs-releases/scalajs-google-charts/images/download.svg?version=0.4.1'></a>
+<a href='https://bintray.com/aleastchs/aleastChs-releases/scalajs-google-charts/0.4.4.Test/link'><img src='https://api.bintray.com/packages/aleastchs/aleastChs-releases/scalajs-google-charts/images/download.svg?version=0.4.4.Test'></a>
 
 # Warning!
 **Versions Below 1.0.0 means it can be unstable or not containing the most of the funcionallities**
