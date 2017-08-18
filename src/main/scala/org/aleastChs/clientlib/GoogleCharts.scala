@@ -22,7 +22,9 @@ package aleastchs {
 
         def setOnLoadCallback(): Unit = js.native
 
-        def setOnLoadCallback(callback: Unit ): Unit = js.native
+        def setOnLoadCallback(callback: js.Function): Unit = js.native
+        def setOnLoadCallback(callback: js.Function1[Unit, Unit]): Unit = js.native
+        def setOnLoadCallback(callback: js.Function0[Unit]): Unit = js.native
 
         @js.native
         class Bar extends js.Object {
