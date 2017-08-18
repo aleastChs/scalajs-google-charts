@@ -1,3 +1,5 @@
+import sbt.Keys.skip
+
 // COMMONSETTINGS
 lazy val commonSettings = Seq(
   version in ThisBuild := Versions.scalaJSGoogleCharts,   // version of current scalajs-google-charts facade
@@ -21,15 +23,17 @@ lazy val publishSettings = Seq(
 lazy val root = (project in file("."))
   .enablePlugins(ScalaJSPlugin)                           // enable scalajs plugin
   .settings(
-  commonSettings,
-  publishSettings,
-  sbtPlugin := true,                                    // to make an auto plugin, create a project and configure sbtPlugin to true
-  name := Settings.facadeName,                          // name (same as <user>/<repo>/<NAME> on bintray)
-  description := "Scala-friendly Google Charts Facades",// description
-  scalaVersion := Versions.scalaPrimary,
+    commonSettings,
+    publishSettings
+  )
+  .settings(
+    sbtPlugin := true,                                    // to make an auto plugin, create a project and configure sbtPlugin to true
+    name := Settings.facadeName,                          // name (same as <user>/<repo>/<NAME> on bintray)
+    description := "Scala-friendly Google Charts Facades",// description
+    scalaVersion := Versions.scalaPrimary,
   // scala version for root
   crossScalaVersions := Versions.scalaOlder             // cross scala ver. for rott
-)
+  )
 // My Github
 homepage := Some(url(Settings.homePageName))
 
