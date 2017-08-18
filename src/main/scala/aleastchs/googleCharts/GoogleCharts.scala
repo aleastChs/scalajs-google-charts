@@ -1,8 +1,11 @@
 package aleastchs.googleCharts
 
 import scala.scalajs.js
+import scala.scalajs.js.annotation.JSGlobal
 
-package google {
+@js.native
+@JSGlobal
+object google extends js.Object {
 
   @js.native
   object charts extends js.Object {
