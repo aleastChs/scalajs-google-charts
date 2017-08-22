@@ -19,8 +19,15 @@ scalajs-google-charts v0.4.1 with Scala 2.11 and sbt 0.13.x
 # How To Use
 In {root}/build.sbt add:
 ```
-resolvers += Resolver.url("aleastchs @ bintray", url("https://dl.bintray.com/aleastchs/aleastChs-releases"))(Resolver.ivyStylePatterns)
-libraryDependencies += "org.aleastChs" % "scalajs-google-charts_<Your Scala Version>" % "<Current Facade Version>"
+lazy val scalajsGoogleChartsVersion = "0.4.4.Test"
+lazy val chartsScalaVersion = "2.11"
+lazy val chartsSbtVersion = "0.13"
+
+lazy val googleChartsUrl = "https://dl.bintray.com/aleastchs/aleastChs-releases/org.aleastChs/scalajs-google-charts/scala_"+ chartsScalaVersion +"/sbt_"+ chartsSbtVersion +"/"+ scalajsGoogleChartsVersion +"/jars/scalajs-google-charts.jar"
+
+libraryDependencies ++= Seq(
+"org.aleastChs" % "scalajs-google-charts" % scalajsGoogleChartsVersion from googleChartsUrl
+)
 ```
 
 Now You are able to use the Facade with imports in .scala-files
