@@ -6,7 +6,7 @@ Type-safe and Scala-friendly facade-library over Google Charts
 
 **Published:**  0.4.5.Test
 
-<a href='https://bintray.com/aleastchs/aleastChs-releases/scalajs-google-charts/0.4.4.Test/link'><img src='https://api.bintray.com/packages/aleastchs/aleastChs-releases/scalajs-google-charts/images/download.svg?version=0.4.4.Test'></a>
+<a href='https://bintray.com/aleastchs/aleastChs-releases/scalajs-google-charts/0.4.5.Test/link'><img src='https://api.bintray.com/packages/aleastchs/aleastChs-releases/scalajs-google-charts/images/download.svg?version=0.4.5.Test'></a>
 
 # Warning!
 **Versions Below 1.0.0 means it can be unstable or not containing the most of the funcionallities**
@@ -42,7 +42,7 @@ object Example {
 or
 
 ```
-import aleastchs.facade.google
+import aleastchs.googleCharts.google
 object Example {
     val timeline = new google.visualization.Timeline("some Div")
 }
