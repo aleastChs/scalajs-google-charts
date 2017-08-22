@@ -3,7 +3,7 @@ package aleastchs.googleCharts
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSGlobal
 
-@JSGlobal
+@JSGlobal("google")
 @js.native
 object google extends js.Object {
 
