@@ -14,6 +14,7 @@ object google extends js.Object {
     def load(loading: String, loadObject: js.Object): Unit = js.native
 
     def setOnLoadCallback(): Unit = js.native
+    def setOnLoadCallback(callback: Unit): Unit = js.native
     def setOnLoadCallback(callback: js.Function): Unit = js.native
     def setOnLoadCallback(callback: js.Function0[Unit]): Unit = js.native
     def setOnLoadCallback(callback: js.Function1[Unit, Unit]): Unit = js.native
