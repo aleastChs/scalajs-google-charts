@@ -2,9 +2,9 @@
 Type-safe and Scala-friendly facade-library over Google Charts
 
 # Current version
-**Ongoing:**    0.4.5.Test
+**Ongoing:**    0.4.6.Test
 
-**Published:**  0.4.4.Final
+**Published:**  0.4.5.Test
 
 <a href='https://bintray.com/aleastchs/aleastChs-releases/scalajs-google-charts/0.4.4.Test/link'><img src='https://api.bintray.com/packages/aleastchs/aleastChs-releases/scalajs-google-charts/images/download.svg?version=0.4.4.Test'></a>
 
@@ -19,7 +19,7 @@ scalajs-google-charts v0.4.1 with Scala 2.11 and sbt 0.13.x
 # How To Use
 In {root}/build.sbt add:
 ```
-lazy val scalajsGoogleChartsVersion = "0.4.4.Test"
+lazy val scalajsGoogleChartsVersion = "<FACADE_VERSION>"
 lazy val chartsScalaVersion = "2.11"
 lazy val chartsSbtVersion = "0.13"
 
