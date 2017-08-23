@@ -4,12 +4,12 @@
 
 package aleastchs.googleCharts.helpers.chartsHelp
 
+import aleastchs.googleCharts.GoogleVisualization.{DataTable, Timeline}
 import scala.scalajs.js
-import aleastchs.googleCharts.google
 
 class TimelineHelper(
-                      val data:     google.visualization.DataTable,
-                      val timeline: google.visualization.Timeline,
+                      val data:     DataTable,
+                      val timeline: Timeline,
                       val options:  TimelineOption
                     ) {
 
@@ -64,8 +64,8 @@ object TimelineHelper {
   private val innerOptions = TimelineInner(null, true, true, null, false, true, null)
 
   // simple init of dataTable
-  private def preDefTimelineData: google.visualization.DataTable = {
-    val toInit: google.visualization.DataTable = new google.visualization.DataTable()
+  private def preDefTimelineData: DataTable = {
+    val toInit: DataTable = new DataTable()
     // todo: use description object
     // todo: do functional
     /*
@@ -89,8 +89,8 @@ descriptionObjects.foreach(obj => toInit addColumn obj.toArray() )
   }
 
   def apply(
-             dataTable: google.visualization.DataTable,
-             timeline: google.visualization.Timeline,
+             dataTable: DataTable,
+             timeline: Timeline,
              optionsTimeline: TimelineOption
            ) = new TimelineHelper(
     dataTable,
@@ -106,7 +106,7 @@ descriptionObjects.foreach(obj => toInit addColumn obj.toArray() )
     // get the predef data table
     preDefTimelineData,
     // create a new GoogleVisualization.Timeline() with the given element as argument
-    new google.visualization.Timeline(element),
+    new Timeline(element),
     // set the options
     options
   )
@@ -117,9 +117,9 @@ descriptionObjects.foreach(obj => toInit addColumn obj.toArray() )
              title: String
            ) = new TimelineHelper(
     // create a new DataTable with the jsonData-string
-    new google.visualization.DataTable(jsonData),
+    new DataTable(jsonData),
     // create a new GoogleVisualization.Timeline() with the given element as argument
-    new google.visualization.Timeline(element),
+    new Timeline(element),
     // create a new OptionsTimeline
     TimelineOption(
       0,
@@ -136,7 +136,7 @@ descriptionObjects.foreach(obj => toInit addColumn obj.toArray() )
     // get the predef data table
     preDefTimelineData,
     // create a new GoogleVisualization.Timeline() with the given element as argument
-    new google.visualization.Timeline(element),
+    new Timeline(element),
     // create a new OptionsTimeline
     TimelineOption(
       0,

@@ -1,11 +1,8 @@
-package aleastchs.googleCharts.helpers.chartsHelp
+package aleastchs.googleCharts
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSGlobal
 
-/**
-  * Created by alexa on 03/08/2017.
-  */
-@JSGlobal("GoogleChartsLoaded")
+@JSGlobal
 @js.native
 object GoogleChartsLoaded extends scalajs.js.Object
