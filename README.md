@@ -1,7 +1,7 @@
 # scalajs-google-charts
 Type-safe and Scala-friendly facade-library over Google Charts
 
-#### branch dev
+## branch dev
 
 # Current version
 **Ongoing:**    0.4.7.Test
