@@ -1,12 +1,15 @@
 package aleastchs.googleCharts
 
 import scala.scalajs.js
-import scala.scalajs.js.annotation.{JSName}
+
 
 package google {
 
-  @JSName("google.charts")
+  import scala.scalajs.js.annotation.JSGlobal
+
+
   @js.native
+  @JSGlobal
   object charts extends js.Object {
     def load(): Unit = js.native
     def load(loading: String): Unit = js.native
