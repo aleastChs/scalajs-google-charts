@@ -5,6 +5,7 @@ import scala.scalajs.js.annotation.{JSName}
 
 package google {
 
+  @JSName("google.charts")
   @js.native
   object charts extends js.Object {
     def load(): Unit = js.native
