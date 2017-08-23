@@ -1,7 +1,7 @@
 package aleastchs.googleCharts
 
 import scala.scalajs.js
-import scala.scalajs.js.annotation.JSGlobal
+import scala.scalajs.js.annotation.{JSGlobal, JSName}
 
 @JSGlobal("google")
 @js.native
@@ -175,7 +175,7 @@ object google extends js.Object {
       def clearChart(): Unit = js.native
     }
 
-
+    @JSName("google.visualization.Timeline")
     @js.native
     class Timeline(container: js.Dynamic) extends js.Object {
       def draw(data: DataTable): Unit = js.native
@@ -190,7 +190,7 @@ object google extends js.Object {
     }
 
 
-
+    @JSName("google.visualization.DataTable")
     @js.native
     class DataTable(
                      optional_data: String = "",
