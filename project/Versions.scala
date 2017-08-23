@@ -1,5 +1,5 @@
 object Versions extends ScalaJS {
-  val scalaPrimary = "2.12.0"
+  val scalaPrimary = "2.12.2"
   val scalaOlder = Seq("2.11.8", "2.10.5")
 }
 
