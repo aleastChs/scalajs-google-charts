@@ -60,6 +60,7 @@ package google {
   }
 
   @js.native
+  @JSGlobal
   class QueryResponse extends js.Object {
 
   }
