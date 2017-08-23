@@ -75,10 +75,3 @@ class DataView (
 
   def toJSON(): String = js.native
 }
-
-@js.native
-@JSGlobal
-object DataView extends js.Object {
-  def apply(data: js.Any, viewAsJson: String = ""): DataView =
-    new DataView(data, viewAsJson)
-}

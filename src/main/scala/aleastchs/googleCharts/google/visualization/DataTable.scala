@@ -120,10 +120,3 @@ class DataTable(
 
   override def clone(): DataTable = js.native
 }
-
-@js.native
-@JSGlobal
-object DataTable extends js.Object {
-  def apply(optional_data: String = "", optional_version: String = ""): DataTable =
-    new DataTable(optional_data, optional_version)
-}

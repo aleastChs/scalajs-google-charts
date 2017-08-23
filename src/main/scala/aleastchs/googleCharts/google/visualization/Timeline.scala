@@ -16,10 +16,3 @@ class Timeline(container: js.Dynamic) extends js.Object {
 
   def getSelection(): js.Array[js.Any] = js.native
 }
-
-@js.native
-@JSGlobal
-object Timeline extends js.Object {
-  def apply(container: js.Dynamic): Timeline =
-    new Timeline(container)
-}
