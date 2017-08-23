@@ -1,14 +1,15 @@
 package aleastchs.googleCharts.google
 
+import aleastchs.googleCharts.google.visualization.DataTable
+
 import scala.scalajs.js
-
-/**
-  * Created by alexa on 23/08/2017.
-  */
+import scala.scalajs.js.annotation.{JSGlobal}
 
 
-package object visualization {
-  // STATIC METHODS
+
+@js.native
+@JSGlobal
+object GoogleVisualization extends js.Object {
   def arrayToDataTable(twoDArray: js.Array[js.Array[js.Any]], opt_firstRowIsData: Boolean = false): DataTable = js.native
   def arrayToDataTable(): Unit = js.native
 
@@ -16,3 +17,4 @@ package object visualization {
 
   def drawToolbar(): Unit = js.native
 }
+

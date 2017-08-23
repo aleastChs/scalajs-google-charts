@@ -1,8 +1,10 @@
 package aleastchs.googleCharts.google.visualization
 
 import scala.scalajs.js
+import scala.scalajs.js.annotation.JSGlobal
 
 @js.native
+@JSGlobal
 class AnnotationChart(container: js.Dynamic) extends js.Object {
   def clearChart(): Unit = js.native
 

@@ -1,8 +1,10 @@
 package aleastchs.googleCharts.google.visualization
 
 import scala.scalajs.js
+import scala.scalajs.js.annotation.JSGlobal
 
 @js.native
+@JSGlobal
 class DataView (
                  val data: js.Any,
                  val viewAsJson: String = ""
@@ -75,6 +77,7 @@ class DataView (
 }
 
 @js.native
+@JSGlobal
 object DataView extends js.Object {
   def apply(data: js.Any, viewAsJson: String = ""): DataView =
     new DataView(data, viewAsJson)

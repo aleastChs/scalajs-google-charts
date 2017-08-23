@@ -1,9 +1,10 @@
 package aleastchs.googleCharts.google.visualization
 
-import scala.scalajs.js.annotation.JSName
+import scala.scalajs.js.annotation.JSGlobal
 import scalajs.js
 
 @js.native
+@JSGlobal
 class DataTable(
                  val optional_data: String = "",
                  val optional_version: String = "") extends js.Object {
@@ -121,6 +122,7 @@ class DataTable(
 }
 
 @js.native
+@JSGlobal
 object DataTable extends js.Object {
   def apply(optional_data: String = "", optional_version: String = ""): DataTable =
     new DataTable(optional_data, optional_version)
