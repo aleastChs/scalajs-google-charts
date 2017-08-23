@@ -4,7 +4,6 @@
 
 package aleastchs.googleCharts.helpers.chartsHelp
 
-import aleastchs.googleCharts.GoogleVisualization.{DataTable, Timeline}
 import scala.scalajs.js
 
 class TimelineHelper(
