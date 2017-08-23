@@ -9,7 +9,7 @@ package google {
 
 
   @js.native
-  @JSGlobal
+  @JSGlobal("google.charts")
   object charts extends js.Object {
     def load(): Unit = js.native
     def load(loading: String): Unit = js.native
