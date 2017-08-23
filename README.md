@@ -4,7 +4,7 @@ Type-safe and Scala-friendly facade-library over Google Charts
 ## branch dev
 
 # Current version
-**Ongoing:**    0.5.0.Test
+**Ongoing:**    0.5.1.Test
 
 **Published:**  0.4.6.Final
 
