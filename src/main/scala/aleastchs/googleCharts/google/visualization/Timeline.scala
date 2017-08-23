@@ -5,7 +5,7 @@ import scala.scalajs.js.annotation.JSGlobal
 
 
 @js.native
-@JSGlobal
+@JSGlobal("google.visualization.Timeline")
 class Timeline(container: js.Dynamic) extends js.Object {
   def draw(data: DataTable): Unit = js.native
   def draw(data: DataView): Unit = js.native
