@@ -1,11 +1,9 @@
 package aleastchs.googleCharts
 
 import scala.scalajs.js
-import scala.scalajs.js.annotation.{JSGlobal, JSName}
+import scala.scalajs.js.annotation.{JSName}
 
-@JSGlobal("google")
-@js.native
-object google extends js.Object {
+package google {
 
   @js.native
   object charts extends js.Object {
@@ -62,8 +60,10 @@ object google extends js.Object {
 
   }
 
+
   @js.native
   object visualization extends js.Object {
+
     // STATIC METHODS
     def arrayToDataTable(twoDArray: js.Array[js.Array[js.Any]], opt_firstRowIsData: Boolean = false): DataTable = js.native
     def arrayToDataTable(): Unit = js.native
