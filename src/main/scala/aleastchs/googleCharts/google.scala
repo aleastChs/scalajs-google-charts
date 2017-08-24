@@ -1,26 +1,11 @@
+/*
 package aleastchs.googleCharts
 
 import scala.scalajs.js
+import scala.scalajs.js.annotation.JSGlobal
 
 
 package google {
-
-  import scala.scalajs.js.annotation.JSGlobal
-
-
-  @js.native
-  @JSGlobal("google.charts")
-  object charts extends js.Object {
-    def load(): Unit = js.native
-    def load(loading: String): Unit = js.native
-    def load(loading: String, loadObject: js.Object): Unit = js.native
-
-    def setOnLoadCallback(): Unit = js.native
-    def setOnLoadCallback(callback: Unit): Unit = js.native
-    def setOnLoadCallback(callback: js.Function): Unit = js.native
-    def setOnLoadCallback(callback: js.Function0[Unit]): Unit = js.native
-    def setOnLoadCallback(callback: js.Function1[Unit, Unit]): Unit = js.native
-
 
     @js.native
     class Bar extends js.Object {
@@ -175,4 +160,4 @@ package google {
 
   }*/
 
-}
+}*/
