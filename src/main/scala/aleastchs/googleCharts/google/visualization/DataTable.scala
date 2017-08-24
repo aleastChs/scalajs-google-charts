@@ -4,7 +4,7 @@ import scala.scalajs.js.annotation.JSGlobal
 import scalajs.js
 
 @js.native
-@JSGlobal
+@JSGlobal("google.visualization.DataTable")
 class DataTable(
                  val optional_data: String = "",
                  val optional_version: String = "") extends js.Object {
