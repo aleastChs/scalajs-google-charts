@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobal}
 
 
 @js.native
-@JSGlobal
+@JSGlobal("google.visualization")
 object GoogleVisualization extends js.Object {
   def arrayToDataTable(twoDArray: js.Array[js.Array[js.Any]], opt_firstRowIsData: Boolean = false): DataTable = js.native
   def arrayToDataTable(): Unit = js.native
