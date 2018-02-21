@@ -30,6 +30,25 @@ object GoogleVisualization extends js.Object {
   }
 
   @js.native
+  class LineChart(container: js.Dynamic)extends js.Object {
+    def draw(data: DataTable, options: js.Object): Unit = js.native
+    def draw(data: DataView, options: js.Object): Unit = js.native
+    def getAction(actionID: js.Any): js.Object = ???
+    def getBoundingBox(id: js.Any): js.Object = ??? // Need to implement, what type is parameter id?
+    def getChartAreaBoundingBox(): js.Object = js.native
+    def getHAxisValue(position: js.Any, optional_axis_index: js.Any): js.Any = js.native
+    def getImageURI(): js.Any = js.native
+    def getVAxisValue(position: js.Any, optional_axis_index: js.Any): js.Any = js.native
+    def getSelection(): js.Array[js.Any] = js.native
+    def getXLocation(position: js.Any, optional_axis_index: js.Any): js.Any = js.native
+    def getYLocation(position: js.Any, optional_axis_index: js.Any): js.Any = js.native
+    def removeAction(actionID: js.Any): Unit = js.native
+    def setAction(action: js.Object): Unit = js.native
+    def setSelection(selection_array: js.Array[js.Any]): Unit = js.native
+    def clearChart(): Unit = js.native
+  }
+
+  @js.native
   class Timeline(container: js.Dynamic) extends js.Object {
     def draw(data: DataTable): Unit = js.native
     def draw(data: DataView): Unit = js.native
@@ -332,7 +351,6 @@ object GoogleVisualization extends js.Object {
     def addErrorFromQueryResponse(container: js.Dynamic, response: js.Any): Unit = js.native
 
   }
-
 
   @js.native
   class QueryResponse extends js.Object {
