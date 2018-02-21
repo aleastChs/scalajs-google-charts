@@ -1,4 +1,4 @@
-object Settings {
+object SettingsBintray {
   // Bintray Structure
   // Username:        aleastchs
   // Repo:            aleastchs/aleastChs-releases
