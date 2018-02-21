@@ -29,8 +29,19 @@ object GoogleVisualization extends js.Object {
     def showDataColumns(columnIndexes: js.Array[Int]): Unit = js.native
   }
 
+
   @js.native
-  class LineChart(container: js.Dynamic)extends js.Object {
+  class Gantt(container: js.Dynamic) extends js.Object {
+    def clearChart(): Unit = js.native
+    def draw(data: DataTable, options: js.Object): Unit = js.native
+    def draw(data: DataView, options: js.Object): Unit = js.native
+    def getSelection(): js.Array[js.Any] = js.native
+    def setSelection(selection_array: js.Array[js.Any]): Unit = js.native
+  }
+
+  @js.native
+  class LineChart(container: js.Dynamic) extends js.Object {
+    def clearChart(): Unit = js.native
     def draw(data: DataTable, options: js.Object): Unit = js.native
     def draw(data: DataView, options: js.Object): Unit = js.native
     def getAction(actionID: js.Any): js.Object = ???
@@ -45,18 +56,15 @@ object GoogleVisualization extends js.Object {
     def removeAction(actionID: js.Any): Unit = js.native
     def setAction(action: js.Object): Unit = js.native
     def setSelection(selection_array: js.Array[js.Any]): Unit = js.native
-    def clearChart(): Unit = js.native
   }
 
   @js.native
   class Timeline(container: js.Dynamic) extends js.Object {
+    
     def draw(data: DataTable): Unit = js.native
     def draw(data: DataView): Unit = js.native
     def draw(data: DataTable, options: js.Object): Unit = js.native
     def draw(data: DataView, options: js.Object): Unit = js.native
-
-    def clearChart(): Unit = js.native
-
     def getSelection(): js.Array[js.Any] = js.native
   }
 
